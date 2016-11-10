@@ -1,13 +1,15 @@
 .container
   .row
     .col-md-6
+      h1 Check UNP number
       = render 'errors'
-
+      
       = form_for(@tax_payer, url: check_unp_tax_payers_path) do |f|
         .form-group
           = f.label :payer_type
-          = f.text_field :payer_type, class: 'form-control'
+          = f.select(:payer_type, TaxPayer::PAYER_TYPES, {}, {class: 'form-control'} )
         .form-group
-          = f.label :unp
+          = f.label :unp 
+            | UNP
           = f.text_field :unp, class: 'form-control'
         = f.submit 'Check', class: 'btn btn-primary'

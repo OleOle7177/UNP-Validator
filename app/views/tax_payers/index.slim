@@ -1,0 +1,11 @@
+.container
+  .row
+    .col-md-6
+      = form_for(@tax_payer, url: check_unp_tax_payers_path, method: :post) do |f|
+        .form-group
+          = f.label :payer_type
+          = f.text_field :payer_type, class: 'form-control'
+        .form-group
+          = f.label :unp
+          = f.text_field :unp, class: 'form-control'
+        = f.submit 'Проверить', class: 'btn btn-primary'

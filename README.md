@@ -1,24 +1,18 @@
-# README
+#UNP Validator
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Dependencies
 
-Things you may want to cover:
+Install dependencies with bundler:
+```
+$ bundle install
+```
 
-* Ruby version
+## Usage
+Run app:
+```
+$ rails s
+```
+Result hash will be printed as output.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Tests
+No tests written yet:/

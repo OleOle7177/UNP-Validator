@@ -1,6 +1,8 @@
 .container
   .row
     .col-md-6
+      = render 'errors'
+
       = form_for(@tax_payer, url: check_unp_tax_payers_path) do |f|
         .form-group
           = f.label :payer_type
@@ -8,4 +10,4 @@
         .form-group
           = f.label :unp
           = f.text_field :unp, class: 'form-control'
-        = f.submit 'Проверить', class: 'btn btn-primary'
+        = f.submit 'Check', class: 'btn btn-primary'

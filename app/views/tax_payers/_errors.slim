@@ -1,0 +1,12 @@
+- if @errors.present?
+  - @errors.each do |k, v|
+    .alert.alert-danger.alert-dismissible role="alert" 
+      button.close aria-label="Close" data-dismiss="alert" type="button" 
+        span aria-hidden="true"  &times;
+      = "#{k}: #{v.join(', ')}"
+
+- elsif flash[:notice]
+  .alert.alert-success.alert-dismissible role="alert" 
+    button.close aria-label="Close" data-dismiss="alert" type="button" 
+      span aria-hidden="true"  &times;
+    = flash[:notice]

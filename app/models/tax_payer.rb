@@ -5,6 +5,6 @@ class TaxPayer
   attr_accessor :unp, :payer_type
   validates :payer_type, inclusion: PAYER_TYPES
 
-  validates :unp, presence: true, unp_number: true
+  validates :unp, unp_number: true
 
 end

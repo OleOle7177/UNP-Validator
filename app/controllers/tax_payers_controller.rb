@@ -6,9 +6,9 @@ class TaxPayersController < ApplicationController
   def check_unp
     @tax_payer = TaxPayer.new(tax_payer_params)
     if @tax_payer.valid?
-      p 'valid!!!'
+      flash[:notice] = 'UNP correct'
     else
-      p 'invalid!!!'
+      @errors = @tax_payer.errors.messages
     end
 
     render 'index'
